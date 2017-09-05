@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<plugin xmlns="http://apache.org/cordova/ns/plugins/1.0" xmlns:android="http://schemas.android.com/apk/res/android" xmlns:m2="http://schemas.microsoft.com/appx/2013/manifest" id="cordova-plugin-openurl" version="0.0.1">
+  <name>Open URL</name>
+  <description>Open URL like prefs:</description>
+  <author>Rand Dusing</author>
+  <keywords>ios,cordova,open,url</keywords>
+  <license>MIT</license>
+  <js-module src="www/OpenURL.js" name="OpenURL">
+    <clobbers target="window.openURL" />
+  </js-module>
+  <preference name="URL_SCHEME" />
+  <platform name="ios">
+    <config-file target="config.xml" parent="/*">
+      <feature name="OpenURL">
+        <param name="ios-package" value="OpenURL" />
+      </feature>
+    </config-file>
+    <header-file src="src/ios/OpenURL.h" />
+    <source-file src="src/ios/OpenURL.m" />
+    <config-file target="*-Info.plist" parent="CFBundleURLTypes">
+      <array>
+        <dict>
+          <key>CFBundleTypeRole</key>
+          <string>Editor</string>
+          <key>CFBundleURLSchemes</key>
+          <array>
+            <string>$URL_SCHEME</string>
+          </array>
+        </dict>
+      </array>
+    </config-file>
+  </platform>
+</plugin>

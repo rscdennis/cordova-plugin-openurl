@@ -1,0 +1,31 @@
+{
+  "name": "cordova-plugin-openurl",
+  "version": "0.0.1",
+  "author": "RSC Dennis",
+  "description": "This plugin allows you to open a URL.",
+  "cordova": {
+    "id": "cordova-plugin-openurl",
+    "platforms": [
+      "ios"
+    ]
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/rscdennis/cordova-plugin-openurl.git"
+  },
+  "keywords": [
+    "rsc",
+    "dennis"
+  ],
+  "engines": [
+    {
+      "name": "cordova",
+      "version": ">=3.0.0"
+    }
+  ],
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/rscdennis/cordova-plugin-openurl/issues"
+  },
+  "homepage": "https://github.com/rscdennis/cordova-plugin-openurl/new/master?readme=1"
+}
